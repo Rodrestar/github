@@ -1,1 +1,75 @@
-eeeeeewww
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Código de Invitación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        input[type="text"], input[type="checkbox"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .output {
+            margin-top: 20px;
+            color: red;
+        }
+        .details {
+            margin-top: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Verificación de Código</h1>
+    <form action="/verificar_codigo" method="post">
+        <label for="codigo">Introduce el Código de Invitación:</label><br>
+        <input type="text" id="codigo" name="codigo" placeholder="Ejemplo: M53YyaakA" required><br>
+
+        <label for="captcha">No soy un robot:</label><br>
+        <input type="checkbox" id="captcha" name="captcha" required><br>
+
+        <input type="submit" value="Verificar Código">
+    </form>
+
+    <div class="output">
+        <!-- Aquí se mostraría el mensaje de validación del código -->
+        El código introducido ha agotado todos sus usos.
+    </div>
+
+    <div class="details">
+        <!-- Detalles del uso del código -->
+        Última activación: 2024-09-23 11:31:26 <br>
+        Usos: 10 <br>
+        Intentos: 62
+    </div>
+</div>
+
+</body>
+</html>
